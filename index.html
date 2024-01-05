@@ -11,6 +11,9 @@
 const html5QrCode = new Html5Qrcode("reader");
 const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 
+    let voucherCode = decodedText.replace("https://myqrcode.mobi/","");
+
+    
     html5QrCode.stop().then((ignore) => {
   // QR Code scanning is stopped.
 }).catch((err) => {
@@ -19,7 +22,9 @@ const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 
 
     
-     window.location.replace("http://10.5.48.1/login?username="+decodedText+"&password="+decodedText);
+
+    
+     window.location.replace("http://10.5.48.1/login?username="+voucherCode+"&password="+voucherCode);
 };
 const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
