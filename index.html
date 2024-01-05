@@ -5,7 +5,7 @@
 </head>
 <body>
     <div id="reader" width="600px"></div>
-<div id="reader" width="600px"></div>
+
 
 <script>
 const html5QrCode = new Html5Qrcode("reader");
@@ -26,7 +26,7 @@ const qrCodeSuccessCallback = (decodedText, decodedResult) => {
     
 
     
-     window.location.replace("http://10.5.48.1/login?username="+voucherCode+"&password="+voucherCode);
+     window.location.replace("http://10.5.48.1/login?username="+decodedText+"&password="+decodedText);
 };
 const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
