@@ -5,14 +5,15 @@
 </head>
 <body>
     <div id="reader" width="600px"></div>
-
+<div id="reader" width="600px"></div>
 
 <script>
 const html5QrCode = new Html5Qrcode("reader");
 const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 
     
-    console.log(document.getElementById('result').innerHTML);
+   console.log(`Code matched = ${decodedText}`, decodedResult);
+
 
     
     html5QrCode.stop().then((ignore) => {
@@ -25,7 +26,7 @@ const qrCodeSuccessCallback = (decodedText, decodedResult) => {
     
 
     
-     window.location.replace("http://10.5.48.1/login?username="+voucherCode+"&password="+voucherCode);
+     //window.location.replace("http://10.5.48.1/login?username="+voucherCode+"&password="+voucherCode);
 };
 const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
