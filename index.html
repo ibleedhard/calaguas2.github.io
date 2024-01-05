@@ -1,13 +1,12 @@
 <html>
 <head>
     <title>Calaguas2 QR CODE DECODER</title>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
 <body>
     <div id="reader" width="600px"></div>
 
 
-
-</body>
-<script src="https://unpkg.com/html5-qrcode" type="text/javascript">
 <script>
 const html5QrCode = new Html5Qrcode("reader");
 const qrCodeSuccessCallback = (decodedText, decodedResult) => {
@@ -26,10 +25,11 @@ const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
 
 html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
-
-
-    
-        
 </script>
-</head>
+
+</body>
+   
+        
+
+
 </html>
